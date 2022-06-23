@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Moonrocks&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+nav ul{
+    list-style-type: none;
+}
+nav{
+    background-color: black;
+    color: rgba(255, 0, 0, 0.911);
+    height: 7vh;
+    align-items: center;
+    display: flex;
+    font-size: larger;
+    padding: 0 3.5vw;
+    font-family: Rubik Moonrocks;
+}
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+.container{
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: Montserrat;
+    padding-left: 4vw;
+}
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover{
+    background-color: rgba(255, 0, 0, 0.368);
+}
+.gameInfo{
+    padding-left: 5vw;
+}
+.imgbox img{
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 10px 23px;
+    padding: 1px 18px;
+    background-color:  rgba(255, 0, 0, 0.205);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: Baloo Bhaina 2;
+    font-size: 15px;
+    font-weight: bold;
+}
+.line{
+    background-color: black;
+    width: 0;
+    transition: width 1s ease-in-out;
+    height: 3px;
+    position: absolute;
+    background-color: red;
+    border-radius: 3px;
+}
+
+@media screen and (max-width: 800px){
+    .gameInfo{
+        margin-top: 34px;
+    }
+    .gameInfo h1{
+        font-size: 1.5rem;
+    }
+    .container{
+        grid-template-rows: repeat(3,20vw);
+        grid-template-columns: repeat(3,20vw);
+        position: relative;
+    }
+    .line{
+        display: none;
+    }
+    .imgbox{
+        margin-top: 3.5vh;
+        margin-left: 9vw;
+    }
+
+}
